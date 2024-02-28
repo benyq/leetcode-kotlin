@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a78b356-1d06-49ae-9d82-6d14f5764eca" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/array/array_704.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/array/array_27.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/leetcode-kotlin/META-INF/leetcode-kotlin.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode-kotlin/META-INF/leetcode-kotlin.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode-kotlin/MainKt.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Kotlin.Array_27Kt.executor": "Run",
     "Kotlin.Array_704Kt.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -63,7 +63,14 @@
       <recent name="F:\IdeaProjects\leetcode-kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Array_704Kt">
+  <component name="RunManager" selected="Kotlin.Array_27Kt">
+    <configuration name="Array_27Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="array.Array_27Kt" />
+      <module name="leetcode-kotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Array_704Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="array.Array_704Kt" />
       <module name="leetcode-kotlin" />
@@ -80,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Array_27Kt" />
         <item itemvalue="Kotlin.Array_704Kt" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -100,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709002734539</updated>
-      <workItem from="1709002735586" duration="4444000" />
+      <workItem from="1709002735586" duration="5679000" />
     </task>
     <servers />
   </component>
