@@ -13,6 +13,23 @@ fun main() {
     printList(removeElements(generateLinkedList(listOf(7, 7, 7, 7)), 7))
 }
 
+private fun removeElements_old(head: ListNode?, `val`: Int): ListNode? {
+    val dummyHead = ListNode(0)
+    dummyHead.next = head
+    var cur: ListNode? = dummyHead.next
+    var prev: ListNode? = dummyHead
+    while (cur != null) {
+        if (cur.`val` != `val`) {
+            prev = cur
+            cur = cur.next
+        }else {
+            cur = cur.next
+            prev?.next = cur
+        }
+    }
+    return dummyHead.next
+}
+
 private fun removeElements(head: ListNode?, `val`: Int): ListNode? {
     val h = ListNode(0)
     var node: ListNode? = h
