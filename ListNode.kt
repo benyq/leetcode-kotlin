@@ -4,8 +4,8 @@ data class ListNode(
 )
 
 
-fun generateLinkedList(list: List<Int>? = null): ListNode? {
-    if (list.isNullOrEmpty()) return null
+fun generateLinkedList(vararg list: Int): ListNode? {
+    if (list.isEmpty()) return null
     val head = ListNode(list[0])
     if (list.size == 1) return head
     var cur = head

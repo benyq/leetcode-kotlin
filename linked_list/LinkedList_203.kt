@@ -8,9 +8,9 @@ import printList
 // 203. 移除链表元素
 // https://leetcode.cn/problems/remove-linked-list-elements/description/
 fun main() {
-    printList(removeElements(generateLinkedList(listOf(1,2,6,3,4,5,6)), 6))
-    printList(removeElements(generateLinkedList(listOf()), 1))
-    printList(removeElements(generateLinkedList(listOf(7, 7, 7, 7)), 7))
+    printList(removeElements(generateLinkedList(1,2,6,3,4,5,6), 6))
+    printList(removeElements(generateLinkedList(), 1))
+    printList(removeElements(generateLinkedList(7, 7, 7, 7), 7))
 }
 
 private fun removeElements_old(head: ListNode?, `val`: Int): ListNode? {
