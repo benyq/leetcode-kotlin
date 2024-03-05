@@ -12,16 +12,26 @@ import printList
 
 fun main() {
     val myLinkedList = MyLinkedList()
-    myLinkedList.addAtHead(1)
+    myLinkedList.addAtHead(2)
     myLinkedList.println()
-    myLinkedList.addAtTail(3)
+    myLinkedList.deleteAtIndex(1)
     myLinkedList.println()
-    myLinkedList.addAtIndex(1, 2)
+    myLinkedList.addAtHead(2)
     myLinkedList.println()
-    println(myLinkedList.get(1))           // 返回 2
-    myLinkedList.deleteAtIndex(1)    // 现在，链表变为 1->3
+    myLinkedList.addAtHead(7)
     myLinkedList.println()
-    println(myLinkedList.get(0))
+    myLinkedList.addAtHead(3)
+    myLinkedList.println()
+    myLinkedList.addAtHead(2)
+    myLinkedList.println()
+    myLinkedList.addAtHead(5)
+    myLinkedList.println()
+    myLinkedList.addAtTail(5)
+    myLinkedList.println()
+    println(myLinkedList.get(5))
+    myLinkedList.deleteAtIndex(6)
+    myLinkedList.deleteAtIndex(4)
+    myLinkedList.println()
 }
 
 // 定义尾节点，把自己带坑里去了！！
@@ -122,59 +132,62 @@ class MyLinkedListOld() {
 }
 
 class MyLinkedList() {
-    private var dummy: ListNode? = ListNode(0)
+    private var dummy: ListNode = ListNode(-1)
     private var size = 0
 
     fun get(index: Int): Int {
-        return getNode(index + 1)?.`val` ?: -1
+        if (index >= size || index < 0) return -1
+        var i = index
+        var cur = dummy.next
+        while (i-- > 0) {
+            cur = cur?.next
+        }
+        return cur?.`val` ?: -1
     }
 
     fun addAtHead(`val`: Int) {
         val node = ListNode(`val`)
-        node.next = dummy?.next
-        dummy?.next = node
+        node.next = dummy.next
+        dummy.next = node
         size++
     }
 
     fun addAtTail(`val`: Int) {
-        val cur = getNode(size)
-        if (cur == null) {
-            addAtHead(`val`)
-        }else {
-            val node = ListNode(`val`)
-            node.next = cur.next
-            cur.next = node
-            size++
+        var cur: ListNode? = dummy
+        while (cur?.next != null) {
+            cur = cur.next
         }
+        val node = ListNode(`val`)
+        cur?.next = node
+        size++
     }
 
     fun addAtIndex(index: Int, `val`: Int) {
-        getNode(index)?.let {
-            val node = ListNode(`val`)
-            node.next = it.next
-            it.next = node
-            size++
+        if(index > size) return
+        var cur: ListNode? = dummy
+        var i = if(index < 0) 0 else index
+        while (i-- > 0) {
+            cur = cur?.next
         }
+        val node = ListNode(`val`)
+        node.next = cur?.next
+        cur?.next = node
+        size++
     }
 
     fun deleteAtIndex(index: Int) {
-        getNode(index)?.let {
-            it.next = it.next?.next
-            size--
-        }
-    }
-
-    private fun getNode(index: Int): ListNode? {
-        if (index < 0 || index > size) return null
-        var mIndex = index
-        var cur = dummy
-        while (mIndex -- > 0) {
+        if (index < 0 || index >= size) return
+        var cur: ListNode? = dummy
+        var i = index
+        while (i-- > 0) {
             cur = cur?.next
         }
-        return cur
+        cur?.next = cur?.next?.next
+        size--
     }
 
+
     fun println() {
-        printList(dummy?.next)
+        printList(dummy.next)
     }
 }
