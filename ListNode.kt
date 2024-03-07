@@ -17,6 +17,24 @@ fun generateLinkedList(vararg list: Int): ListNode? {
     return head
 }
 
+fun contact(head: ListNode?, tail: ListNode?): ListNode? {
+    if (head == null) return null
+    var cur: ListNode? = head
+    while (cur?.next != null) {
+        cur = cur.next
+    }
+    cur?.next = tail
+    return head
+}
+
+fun lastNode(head: ListNode?): ListNode? {
+    var cur = head
+    while (cur?.next != null) {
+        cur = cur.next
+    }
+    return cur
+}
+
 fun printList(head: ListNode?) {
     var cur = head
     val content = StringBuilder("[")
