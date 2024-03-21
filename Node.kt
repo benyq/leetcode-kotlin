@@ -1,3 +1,5 @@
+import java.util.*
+
 data class ListNode(
     val `val`: Int,
     var next: ListNode? = null
@@ -48,3 +50,11 @@ fun printList(head: ListNode?) {
     content.append(']')
     println(content.toString())
 }
+
+
+data class TreeNode(
+    val `val`: Int,
+    var left: TreeNode? = null,
+    var right: TreeNode? = null
+)
+
