@@ -58,3 +58,26 @@ data class TreeNode(
     var right: TreeNode? = null
 )
 
+
+fun arrayToBinaryTree(arr: Array<Int?>): TreeNode? {
+    if (arr.isEmpty()) return null
+
+    val nodes = arr.map { if (it == null) null else TreeNode(it) }
+
+    val n = nodes.size
+    for (i in 0 until n) {
+        val node = nodes[i]
+        if (node != null) {
+            val leftIndex = 2 * i + 1
+            val rightIndex = 2 * i + 2
+            if (leftIndex < n) {
+                node.left = nodes[leftIndex]
+            }
+            if (rightIndex < n) {
+                node.right = nodes[rightIndex]
+            }
+        }
+    }
+
+    return nodes[0]
+}
