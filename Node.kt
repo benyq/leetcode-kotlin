@@ -1,6 +1,6 @@
 import java.util.*
 
-data class ListNode(
+class ListNode(
     val `val`: Int,
     var next: ListNode? = null
 )
@@ -52,7 +52,7 @@ fun printList(head: ListNode?) {
 }
 
 
-data class TreeNode(
+class TreeNode(
     val `val`: Int,
     var left: TreeNode? = null,
     var right: TreeNode? = null
