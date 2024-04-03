@@ -53,7 +53,7 @@ fun printList(head: ListNode?) {
 
 
 class TreeNode(
-    val `val`: Int,
+    var `val`: Int,
     var left: TreeNode? = null,
     var right: TreeNode? = null
 
