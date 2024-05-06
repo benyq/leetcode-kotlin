@@ -5,6 +5,7 @@ import java.util.LinkedList
 
 // 78. 子集
 // https://leetcode.cn/problems/subsets/
+// 子集问题所有节点都是需要的
 
 fun main() {
     println(subsets(intArrayOf(1,2,3)))
